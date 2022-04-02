@@ -78,8 +78,8 @@ def ascii_draw(istart, iend, jstart, jend):
         print('')
 
 def png_draw(istart, iend, jstart, jend):
-    w=1920*2#1920
-    h=1080*2#1080
+    w=400#1920
+    h=300#1080
     jd = float(jend - jstart)/h
     id = float(iend - istart)/w
 
@@ -98,7 +98,7 @@ def png_draw(istart, iend, jstart, jend):
             l = l + results[i]
         p.append(l)
 
-    f = open('swatch2.png', 'wb')
+    f = open('mandel.png', 'wb')
     w = png.Writer(w, h, greyscale=False)
     w.write(f, p)
     f.close()
